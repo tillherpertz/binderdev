@@ -1,0 +1,86 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+    justify-content: space-around;
+}
+
+#navbar {
+    background-color: $binder-yellow;
+    transition: left .2s cubic-bezier(0, 0, 0.72, 0.33);
+
+    &.collapsed {
+        display: block;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: -100%;
+        z-index: 1;
+
+        &.show {
+            display: block;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 2em;
+        justify-content: space-around;
+
+        .navigation-wrapper {
+            width: 40%;
+
+            button.icon--toggle-menu {
+                display: none;
+            }
+
+            #navbar {
+
+                &.collapsed {
+                    display: block;
+                    position: initial;
+                    background: none;
+                    height: auto;
+                    z-index: 1;
+                }
+
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    a {
+                        position: relative;
+                        font-size: 1em;
+                        text-decoration: none;
+
+                        &.is--active {
+                            font-weight: 600;
+
+                            &::after {
+                                position: absolute;
+                                top: 12px;
+                                right: -13px;
+                                content: url(../../public/images/uline.svg);
+                            }
+                        }
+
+                        &:hover {
+                            color: $binder-yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

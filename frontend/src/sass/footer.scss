@@ -1,0 +1,23 @@
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    .links-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .75em 0;
+
+        .social-wrap {
+            i {
+                font-size: 22px;
+                margin-right: .5em;
+
+                &:hover {
+                    color: $binder-yellow;
+                }
+            }
+        }
+    }
+}

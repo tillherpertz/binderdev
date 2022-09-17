@@ -1,0 +1,45 @@
+// FONT DEFINITIONS
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    color: $binder-white;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+}
+
+h1.hero-headline {
+    font-size: 7em;
+}
+
+p.hero-paragraph {
+    font-size: 1.5em;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
