@@ -20,7 +20,6 @@ function ThemeContextWrapper(props) {
     useEffect(() => {
         switch (theme) {
             case themes.light:
-                setCookieL();
                 document.body.classList.add('is-light');
                 break;
             case themes.dark:
