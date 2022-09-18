@@ -8,7 +8,6 @@ header {
 }
 
 #navbar {
-    background-color: $binder-yellow;
     transition: left .2s cubic-bezier(0, 0, 0.72, 0.33);
 
     &.collapsed {
@@ -59,10 +58,19 @@ header {
                     justify-content: space-between;
                     width: 100%;
 
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        list-style-type: none;
+                        width: 100%;
+                    }
+
                     a {
                         position: relative;
                         font-size: 1em;
                         text-decoration: none;
+                        cursor: pointer;
 
                         &.is--active {
                             font-weight: 600;
@@ -71,12 +79,8 @@ header {
                                 position: absolute;
                                 top: 12px;
                                 right: -13px;
-                                content: url(../../public/images/uline.svg);
+                                content: url(../../../public/images/uline.svg);
                             }
-                        }
-
-                        &:hover {
-                            color: $binder-yellow;
                         }
                     }
                 }

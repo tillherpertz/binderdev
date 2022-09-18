@@ -4,7 +4,6 @@
 }
 
 body {
-    background: linear-gradient(60deg, rgba(14, 14, 14, 1) 0%, rgba(16, 16, 16, 1) 43%, rgba(14, 14, 14, 1) 43%, rgba(16, 16, 16, 1) 100%);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -20,16 +19,12 @@ i {
 // Button Definition
 
 button {
-    background-color: $binder-yellow;
+
     border: none;
     font-weight: 500;
     font-size: 1em;
     min-width: 13em;
     padding: .75em;
-
-    &:hover {
-        background-color: $binder-white;
-    }
 }
 
 .App {

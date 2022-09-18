@@ -1,20 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 import { BrowserRouter as Router } from "react-router-dom";
-
-import { ApolloProvider } from "@apollo/react-hooks";
+import { CookiesProvider } from "react-cookie";
 
 import App from './App';
+import ThemeContextWrapper from './components/theme/themeContextWrapper';
 
-import client from "./utils/apolloClient";
+const client = new ApolloClient({
+    uri: `${process.env.REACT_APP_BACKEND_URL}/graphql`,
+    cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
-    <React.StrictMode>
-        <Router>
-            <ApolloProvider client={client}>
-                <App />
-            </ApolloProvider>
-        </Router>
-    </React.StrictMode>
+    <Router>
+        <ApolloProvider client={client}>
+            <CookiesProvider>
+                <ThemeContextWrapper>
+                    <App />
+                </ThemeContextWrapper>
+            </CookiesProvider>
+        </ApolloProvider>
+    </Router>
 );

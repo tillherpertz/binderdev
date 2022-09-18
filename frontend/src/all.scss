@@ -1,0 +1,16 @@
+// Global Rules
+@import "./sass/variables.scss";
+
+@import "./sass/global.scss";
+@import "./sass/fonts.scss";
+@import "./sass/colors.scss";
+
+// Header & Nav
+@import "./components/header/header.scss";
+@import "./components/nav/navicon-mobile.scss";
+
+// Contents
+@import "./components/content/home.scss";
+
+//Footer
+@import "./components/footer/footer.scss";
