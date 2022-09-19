@@ -3,16 +3,19 @@ import { ThemeContext, themes } from './themeContext';
 import { useCookies } from "react-cookie";
 
 function ThemeContextWrapper(props) {
-    const [theme, setTheme] = useState(themes.dark);
-    const [cookies, setCookie] = useCookies(['theme']);
 
-    function getCookieTheme() {
-        if (cookies.theme == 'light') {
-            document.body.classList.add('is-light');
+    const getThemeInStorage = () => {
+        if (localStorage.getItem('theme') == 'is-light') {
+            return themes.light;
         } else {
-            document.body.classList.remove('is-light');
+            return themes.dark;
         }
     }
+
+    const [theme, setTheme] = useState(getThemeInStorage());
+    const [cookies, setCookie] = useCookies(['theme']);
+
+
     function changeTheme(theme) {
         setTheme(theme);
     }
@@ -23,8 +26,8 @@ function ThemeContextWrapper(props) {
                 document.body.classList.add('is-light');
                 break;
             case themes.dark:
-                document.body.classList.remove('is-light');
             default:
+                document.body.classList.remove('is-light');
                 break;
         }
     }, [theme]);

@@ -1,10 +1,14 @@
 import React from "react";
 import Query from "../Query/query";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import CAT_QUERY from "../../queries/categories/categories";
 
 function Nav() {
+    let activeStyle = {
+    };
+
     return (
         <div className="navigation-wrapper">
             <button className="icon--toggle-menu" type="button">
@@ -17,11 +21,23 @@ function Nav() {
                         return (
                             <nav>
                                 <ul>
+                                    <li key="home">
+                                        <NavLink to="/" end style={({ isActive }) =>
+                                            isActive ? activeStyle : undefined
+                                        }>
+                                            home.
+                                        </NavLink>
+                                    </li>
                                     {categories.data.map((category) => {
                                         return (
                                             <li key={category.attributes.Slug}>
-                                                <a href={category.attributes.Slug} className="">{category.attributes.Name}.</a>
+                                                <NavLink to={category.attributes.Slug} style={({ isActive }) =>
+                                                    isActive ? activeStyle : undefined
+                                                }>
+                                                    {category.attributes.Name}.
+                                                </NavLink>
                                             </li>
+
                                         );
                                     })}
                                 </ul>

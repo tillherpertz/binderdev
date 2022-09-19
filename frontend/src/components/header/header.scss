@@ -64,21 +64,28 @@ header {
                         justify-content: space-between;
                         list-style-type: none;
                         width: 100%;
+
+                        li {
+                            min-width: 25%;
+                            text-align: center;
+                        }
                     }
 
                     a {
+                        display: block;
                         position: relative;
                         font-size: 1em;
                         text-decoration: none;
                         cursor: pointer;
 
-                        &.is--active {
+                        &.active {
                             font-weight: 600;
 
                             &::after {
                                 position: absolute;
                                 top: 12px;
-                                right: -13px;
+                                left: 18%;
+                                margin-left: -3px;
                                 content: url(../../../public/images/uline.svg);
                             }
                         }
