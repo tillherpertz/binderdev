@@ -7,7 +7,6 @@ const themes = {
 
 const ThemeContext = createContext({
     theme: themes.dark,
-    changeTheme: () => { },
 });
 
 export { themes, ThemeContext }

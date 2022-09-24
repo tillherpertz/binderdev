@@ -101,6 +101,7 @@ body.is-light {
     // Button 
 
     button {
+        color: $binder-dark;
         background-color: $binder-primary;
 
         &:hover {

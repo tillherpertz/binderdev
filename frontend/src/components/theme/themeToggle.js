@@ -3,18 +3,18 @@ import { ThemeContext, themes } from "./themeContext";
 import { useCookies } from "react-cookie";
 
 function ThemeToggle() {
-    const [darkMode, setDarkMode] = React.useState(true);
-    const [cookies, setCookie] = useCookies(['theme']);
+    const [darkMode, setDarkMode] = React.useState(false);
 
     const setThemeInStorage = (theme) => {
         localStorage.setItem('theme', theme)
     }
 
     function determineTheme() {
-        if (darkMode) {
+        if (localStorage.getItem('theme') == 'is-dark') {
             return 'is-light';
         } else {
             return 'is-dark';
+
         }
     }
 
@@ -28,7 +28,7 @@ function ThemeToggle() {
                             setDarkMode(!darkMode);
                             changeTheme(darkMode ? themes.light : themes.dark);
                         }}
-                        className={darkMode ? 'bi-brightness-high' : 'bi-moon-fill'}>
+                        id='theme-toggler'>
                     </i>
                 )}
             </ThemeContext.Consumer>

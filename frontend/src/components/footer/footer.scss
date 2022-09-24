@@ -1,6 +1,4 @@
 footer {
-    position: absolute;
-    bottom: 0px;
     width: 100%;
 
     .links-wrap {
@@ -15,5 +13,10 @@ footer {
                 margin-right: .5em;
             }
         }
+    }
+
+    &.is-absolute {
+        position: absolute;
+        bottom: 0;
     }
 }

@@ -1,0 +1,14 @@
+.blogpost-wrapper {
+    width: 70%;
+    margin: -3em auto 0 auto;
+    z-index: -1;
+}
+
+.blogpost-listing {
+    display: flex;
+    flex-direction: row;
+
+    img {
+        max-width: 18em;
+    }
+}

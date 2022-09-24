@@ -29,9 +29,7 @@ button {
 
 .App {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    display: block;
     min-height: 100vh;
 }
 
@@ -39,5 +37,6 @@ button {
     .App {
         margin: 0 auto;
         max-width: 65%;
+        min-width: 65%;
     }
 }

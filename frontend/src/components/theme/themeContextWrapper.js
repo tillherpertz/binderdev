@@ -24,10 +24,18 @@ function ThemeContextWrapper(props) {
         switch (theme) {
             case themes.light:
                 document.body.classList.add('is-light');
+                document.getElementById('theme-toggler').classList.remove('bi-brightness-high')
+                document.getElementById('theme-toggler').classList.add('bi-moon-fill');
                 break;
             case themes.dark:
+                document.body.classList.remove('is-light');
+                document.getElementById('theme-toggler').classList.remove('bi-moon-fill')
+                document.getElementById('theme-toggler').classList.add('bi-brightness-high');
+                break;
             default:
                 document.body.classList.remove('is-light');
+                document.getElementById('theme-toggler').classList.remove('bi-moon-fill')
+                document.getElementById('theme-toggler').classList.add('bi-brightness-high');
                 break;
         }
     }, [theme]);

@@ -10,7 +10,10 @@
 @import "./components/nav/navicon-mobile.scss";
 
 // Contents
-@import "./components/content/home.scss";
+@import "./components/home/home.scss";
+@import "./components/portfolio/portfolio.scss";
+@import "./components/blog/blog.scss";
+@import "./components/about/about.scss";
 
 //Footer
 @import "./components/footer/footer.scss";

@@ -3,11 +3,9 @@ import Query from "../Query/query";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
-import CAT_QUERY from "../../queries/categories/categories";
+import CAT_QUERY from "../../queries/categories_query";
 
 function Nav() {
-    let activeStyle = {
-    };
 
     return (
         <div className="navigation-wrapper">
@@ -22,18 +20,19 @@ function Nav() {
                             <nav>
                                 <ul>
                                     <li key="home">
-                                        <NavLink to="/" end style={({ isActive }) =>
-                                            isActive ? activeStyle : undefined
-                                        }>
+                                        <NavLink
+                                            to="/"
+                                            end
+                                            className={({ isActive }) => (isActive ? 'active' : undefined)}>
                                             home.
                                         </NavLink>
                                     </li>
                                     {categories.data.map((category) => {
                                         return (
                                             <li key={category.attributes.Slug}>
-                                                <NavLink to={category.attributes.Slug} style={({ isActive }) =>
-                                                    isActive ? activeStyle : undefined
-                                                }>
+                                                <NavLink
+                                                    to={'/' + category.attributes.Slug}
+                                                    className={({ isActive }) => (isActive ? 'active' : undefined)}>
                                                     {category.attributes.Name}.
                                                 </NavLink>
                                             </li>

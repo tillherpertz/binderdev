@@ -13,7 +13,7 @@ function Footer() {
                     <p>made in germany.</p>
                 </div></div>
         </footer >
-    );
+    )
 }
 
 export default Footer
