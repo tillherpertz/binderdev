@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from '../nav/nav.js'
-import ThemeToggle from "../theme/themeToggle.js";
+import ThemeSetter from "../theme/themeSetter.js";
 
 function Header() {
     return (
@@ -11,7 +11,7 @@ function Header() {
                 </a>
             </div>
             <Nav></Nav>
-            <ThemeToggle></ThemeToggle>
+            <ThemeSetter></ThemeSetter>
         </header>
     );
 }

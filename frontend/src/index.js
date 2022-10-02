@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { CookiesProvider } from "react-cookie";
 
 import App from './App';
-import ThemeContextWrapper from './components/theme/themeContextWrapper';
 
 const client = new ApolloClient({
     uri: `${process.env.REACT_APP_BACKEND_URL}/graphql`,
@@ -17,9 +16,7 @@ root.render(
     <Router>
         <ApolloProvider client={client}>
             <CookiesProvider>
-                <ThemeContextWrapper>
-                    <App />
-                </ThemeContextWrapper>
+                <App />
             </CookiesProvider>
         </ApolloProvider>
     </Router>
