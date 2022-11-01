@@ -1,5 +1,11 @@
 // FONT DEFINITIONS
 
+@media only screen and (min-width: 375px) {
+    h1.hero-headline {
+        line-height: .9;
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }

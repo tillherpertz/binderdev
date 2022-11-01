@@ -1,3 +1,28 @@
+.content-wrap {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 1em;
+
+    .button-wrap {
+        margin: 1em auto;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+
+        a {
+            width: 100%;
+            margin-top: 1em;
+            margin-right: 1em;
+
+        }
+
+        button {
+            cursor: pointer;
+        }
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .content-wrap {
         display: flex;
@@ -18,15 +43,6 @@
 
         .button-wrap {
             margin-top: 1em;
-
-            a {
-                width: 100%;
-                margin-right: 1em;
-            }
-
-            button {
-                cursor: pointer;
-            }
         }
     }
 }
