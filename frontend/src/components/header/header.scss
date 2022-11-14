@@ -4,6 +4,11 @@ header {
     align-items: center;
     padding: 2em;
     justify-content: space-around;
+
+    #image--logo {
+        z-index: 2;
+    }
+
 }
 
 #navbar {
@@ -21,6 +26,42 @@ header {
             display: block;
             position: absolute;
             left: 0;
+            width: 83%;
+            height: 101vh;
+            top: 0;
+        }
+    }
+
+    ul {
+        display: flex;
+        width: 80%;
+        margin: 120px auto 0 auto;
+        flex-direction: column;
+        list-style-type: none;
+
+        li {
+            font-size: 24px;
+            font-weight: 400;
+            padding: 10px;
+            border-top: 1px solid black;
+
+            &:last-of-type {
+                border-bottom: 1px solid black;
+                ;
+            }
+
+            &.is--active {
+                font-weight: bold;
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+
+            &.active {
+                font-weight: 600;
+            }
         }
     }
 }
@@ -67,10 +108,12 @@ header {
                         justify-content: space-between;
                         list-style-type: none;
                         width: 100%;
+                        margin: 0;
 
                         li {
                             min-width: 25%;
                             text-align: center;
+                            border: none;
                         }
                     }
 
