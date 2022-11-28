@@ -124,16 +124,12 @@ header {
                         text-decoration: none;
                         cursor: pointer;
 
-                        &.active {
-                            font-weight: 600;
-
-                            &::after {
-                                position: absolute;
-                                top: 12px;
-                                left: 18%;
-                                margin-left: -3px;
-                                content: url(../../../public/images/uline.svg);
-                            }
+                        &.active::after {
+                            position: absolute;
+                            top: 12px;
+                            left: 18%;
+                            margin-left: -3px;
+                            content: url(../../../public/images/uline.svg);
                         }
                     }
                 }

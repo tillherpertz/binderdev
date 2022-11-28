@@ -1,8 +1,11 @@
 import React from "react";
 import Query from "../Query/query";
-import Header from '../header/header'
-import Footer from '../footer/footer'
+import Header from '../header/header';
+import Post from '../blog/post/post.js'
+import Footer from '../footer/footer';
 import BLOG_QUERY from "../../queries/blog_query";
+
+import { Link } from "react-router-dom";
 
 function Blog() {
     return (
@@ -17,13 +20,13 @@ function Blog() {
                                 {blogposts.data.map((blogpost) => {
                                     return (
                                         <div className="blogpost-listing">
-                                            <div>
+                                            <div className="blog-image-wrap">
                                                 <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
                                             </div>
                                             <div className="blog-desc">
                                                 <h2>{blogpost.attributes.Title}</h2>
                                                 <p>{blogpost.attributes.Description}</p>
-                                                <button>read more.</button>
+                                                <Link to={'/blog/' + blogpost.attributes.Slug}>read more.</Link>
                                             </div>
                                         </div>
                                     );

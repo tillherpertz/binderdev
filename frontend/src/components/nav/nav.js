@@ -21,12 +21,14 @@ class Nav extends React.Component {
             this.setState({
                 navOpen: true
             })
+            document.body.classList.add('nav-open');
             idNavbar.classList.add('show');
             classIconToggle.classList.toggle('open');
         } else {
             this.setState({
                 navOpen: false
             })
+            document.body.classList.remove('nav-open');
             idNavbar.classList.remove('show');
             classIconToggle.classList.toggle('open');
         }
@@ -51,6 +53,9 @@ class Nav extends React.Component {
                                     <ul>
                                         <li key="home">
                                             <NavLink
+                                                onClick={() => {
+                                                    this.navToggle()
+                                                }}
                                                 to="/"
                                                 end
                                                 className={({ isActive }) => (isActive ? 'active' : undefined)}>
@@ -61,6 +66,9 @@ class Nav extends React.Component {
                                             return (
                                                 <li key={category.attributes.Slug}>
                                                     <NavLink
+                                                        onClick={() => {
+                                                            this.navToggle()
+                                                        }}
                                                         to={'/' + category.attributes.Slug}
                                                         className={({ isActive }) => (isActive ? 'active' : undefined)}>
                                                         {category.attributes.Name}.

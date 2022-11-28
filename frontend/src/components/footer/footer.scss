@@ -1,30 +1,25 @@
-@media only screen and (min-width: 375px) {
-    footer {
-        width: 100%;
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 
-        hr {
-            width: 80%;
-            margin: 0 auto;
-        }
+    hr {
+        width: 80%;
+        margin: 0 auto;
+    }
 
-        .links-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            margin: .75em auto;
+    .links-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: .75em auto;
 
-            .social-wrap {
-                i {
-                    font-size: 22px;
-                    margin-right: .5em;
-                }
+        .social-wrap {
+            i {
+                font-size: 22px;
+                margin-right: .5em;
             }
-        }
-
-        &.is-absolute {
-            position: absolute;
-            bottom: 0;
         }
     }
 }

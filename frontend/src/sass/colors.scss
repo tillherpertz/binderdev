@@ -64,10 +64,6 @@ body.is-dark {
         background: none;
     }
 
-    .icon--toggle-menu.open {
-        background: $binder-dark;
-    }
-
     .icon--toggle-menu span {
         background: $binder-light;
     }
@@ -141,10 +137,6 @@ body {
 
     button.icon--toggle-menu:hover {
         background: none;
-    }
-
-    .icon--toggle-menu.open {
-        background: $binder-light;
     }
 
     .icon--toggle-menu span {

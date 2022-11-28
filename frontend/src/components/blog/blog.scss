@@ -1,14 +1,29 @@
 .blogpost-wrapper {
-    width: 70%;
-    margin: -3em auto 0 auto;
+    width: 100%;
+    margin: -1em auto 0 auto;
     z-index: -1;
 }
 
 .blogpost-listing {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3em;
 
     img {
-        max-width: 18em;
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .blog-desc {
+        width: 100%;
+
+        * {
+            margin-bottom: .4em;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
     }
 }
