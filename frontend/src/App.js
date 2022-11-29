@@ -1,7 +1,11 @@
 import Home from "./components/home/home.js"
 import Blog from "./components/blog/blog.js";
+import Post from "./components/blog/post/post.js"
 import Portfolio from "./components/portfolio/portfolio.js";
 import About from "./components/about/about.js"
+
+import BLOGPOST_QUERY from "./queries/blog_single_query.js";
+
 import { Routes, Route, NavLink, Switch } from 'react-router-dom'
 import './all.scss';
 
@@ -17,6 +21,7 @@ function App() {
                 </Route>
                 <Route path='/about' element={<About />}>
                 </Route>
+                <Route path="/blog/:slug" element={<Post />} exact />
             </Routes>
         </div>
     );

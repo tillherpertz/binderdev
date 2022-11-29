@@ -3,7 +3,7 @@ import Query from "../Query/query";
 import Header from '../header/header';
 import Post from '../blog/post/post.js'
 import Footer from '../footer/footer';
-import BLOG_QUERY from "../../queries/blog_query";
+import BLOG_COLLECTION_QUERY from "../../queries/blog_collection_query";
 
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function Blog() {
             <Header></Header>
             <div className="content-wrap is-blog">
                 <h1 className="hero-headline">Blog.</h1>
-                <Query query={BLOG_QUERY} id={null}>
+                <Query query={BLOG_COLLECTION_QUERY} id={null}>
                     {({ data: { blogposts } }) => {
                         return (
                             <div className="blogpost-wrapper">
