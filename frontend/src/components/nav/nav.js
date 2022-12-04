@@ -16,19 +16,26 @@ class Nav extends React.Component {
 
     navToggle() {
         const idNavbar = document.getElementById('navbar');
+        const idLogo = document.getElementById('image--logo');
         const classIconToggle = document.getElementsByClassName('icon--toggle-menu')[0];
         if (this.state.navOpen === false) {
             this.setState({
                 navOpen: true
             })
             document.body.classList.add('nav-open');
+            idLogo.classList.remove('svg--filter-logo')
             idNavbar.classList.add('show');
+            idLogo.classList.add('svg--filter-light')
             classIconToggle.classList.toggle('open');
+
         } else {
             this.setState({
                 navOpen: false
             })
             document.body.classList.remove('nav-open');
+            idLogo.classList.remove('.svg--filter-dark')
+            idLogo.classList.add('svg--filter-logo')
+            idLogo.classList.remove('svg--filter-light')
             idNavbar.classList.remove('show');
             classIconToggle.classList.toggle('open');
         }

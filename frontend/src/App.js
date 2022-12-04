@@ -1,6 +1,6 @@
 import Home from "./components/home/home.js"
 import Blog from "./components/blog/blog.js";
-import Post from "./components/blog/post/post.js"
+import Post from "./components/post/post.js"
 import Portfolio from "./components/portfolio/portfolio.js";
 import About from "./components/about/about.js"
 

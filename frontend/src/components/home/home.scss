@@ -4,6 +4,10 @@
     justify-content: center;
     padding: 1em 1em 5em 1em;
 
+    &.is-blog h1 {
+        z-index: 2;
+    }
+
     .button-wrap {
         margin: 1em auto;
         display: grid;

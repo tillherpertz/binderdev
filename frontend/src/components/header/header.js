@@ -7,7 +7,7 @@ function Header() {
         <header>
             <div id="image--logo" className="svg--filter-logo">
                 <a href="/">
-                    <img src="images/logos/logo_binder.svg" alt="Binder Logo" width="173" height="56" />
+                    <img src="/images/logos/logo_binder.svg" alt="Binder Logo" width="173" height="56" />
                 </a>
             </div>
             <Nav></Nav>

@@ -64,14 +64,35 @@ body.is-dark {
         background: none;
     }
 
-    .icon--toggle-menu span {
-        background: $binder-light;
+    .icon--toggle-menu {
+        span {
+            background: $binder-light;
+        }
+    }
+
+    .icon--toggle-menu.open {
+        span {
+            background-color: $binder-dark;
+        }
+    }
+
+    // Navbar Mobile Show Open
+    #navbar.collapsed {
+        a {
+            color: $binder-dark;
+        }
     }
 
     // Footer HR
 
     hr {
         border: 1px solid $binder-light;
+    }
+
+    // Blog HR
+
+    hr.blog-spacer {
+        background-color: $binder-light;
     }
 }
 
@@ -147,5 +168,11 @@ body {
 
     hr {
         border: 1px solid $binder-dark;
+    }
+
+    // Blog HR
+
+    hr.blog-spacer {
+        background-color: $binder-dark;
     }
 }

@@ -6,7 +6,8 @@ header {
     justify-content: space-around;
 
     #image--logo {
-        z-index: 2;
+        transition: 0.2s;
+        z-index: 4;
     }
 
 }
@@ -29,6 +30,7 @@ header {
             width: 83%;
             height: 101vh;
             top: 0;
+            z-index: 3;
         }
     }
 
@@ -57,7 +59,6 @@ header {
         }
 
         a {
-            text-decoration: none;
 
             &.active {
                 font-weight: 600;

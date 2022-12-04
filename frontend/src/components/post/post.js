@@ -1,8 +1,8 @@
 import React from "react";
-import Query from "../../Query/query";
-import Header from '../../header/header'
-import Footer from '../../footer/footer'
-import BLOG_SINGLE_QUERY from "../../../queries/blog_single_query";
+import Query from "../Query/query";
+import Header from '../header/header'
+import Footer from '../footer/footer'
+import BLOG_SINGLE_QUERY from "../../queries/blog_single_query";
 import { useParams } from "react-router";
 
 function Post() {

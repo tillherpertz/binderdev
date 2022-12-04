@@ -16,6 +16,10 @@ $binder-primary: #eecc00;
     filter: invert(99%) sepia(3%) saturate(374%) hue-rotate(201deg) brightness(117%) contrast(84%);
 }
 
+.svg--filter-dark {
+    filter: invert(81%) sepia(75%) saturate(2820%) hue-rotate(0deg) brightness(93%) contrast(106%);
+}
+
 body.is-dark {
     .svg--filter-logo {
         filter: invert(81%) sepia(75%) saturate(2820%) hue-rotate(0deg) brightness(93%) contrast(106%);
