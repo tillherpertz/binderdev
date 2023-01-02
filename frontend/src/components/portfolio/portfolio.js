@@ -7,7 +7,8 @@ import Portfolio_QUERY from "../../queries/portfolio_query";
 function Portfolio() {
     return (
         <div>
-
+            <Header></Header>
+            <Footer></Footer>
         </div>
     );
 }
