@@ -1,7 +1,7 @@
 import React from "react";
 import Query from "../Query/query";
 import Header from '../header/header';
-import Post from '../post/post.js'
+import Post from '../bpost/bpost.js';
 import Footer from '../footer/footer';
 import BLOG_COLLECTION_QUERY from "../../queries/blog_collection_query";
 
@@ -21,7 +21,9 @@ function Blog() {
                                     return (
                                         <div className="blogpost-listing">
                                             <div className="blog-image-wrap">
-                                                <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
+                                                <Link to={blogpost.attributes.Slug}>
+                                                    <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
+                                                </Link>
                                             </div>
                                             <div className="blog-desc">
                                                 <h2>{blogpost.attributes.Title}</h2>

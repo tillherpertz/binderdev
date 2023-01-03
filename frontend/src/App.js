@@ -1,6 +1,6 @@
 import Home from "./components/home/home.js"
 import Blog from "./components/blog/blog.js";
-import Post from "./components/post/post.js"
+import Post from "./components/bpost/bpost.js"
 import Portfolio from "./components/portfolio/portfolio.js";
 import About from "./components/about/about.js"
 
@@ -22,6 +22,7 @@ function App() {
                 <Route path='/about' element={<About />}>
                 </Route>
                 <Route path="/blog/:slug" element={<Post />} exact />
+                <Route path="/portfolio/:slug" element={<Post />} exact />
             </Routes>
         </div>
     );
