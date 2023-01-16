@@ -11,5 +11,8 @@ App not yet deployed.
 ![screenshot](screenshot-start.png)
 ![screenshot](screenshot-design-start.png)
 ![screenshot](screenshot-design-light.png)
+![screenshot](screenshot-menu-open.png)
 ![screenshot](screenshot-blogpost-gans.png)
+![screenshot](screenshot-blog-darkmode.png)
+![screenshot](screenshot-blog-lightmode.png)
 ![screenshot](screenshot-backend.png)
