@@ -20,19 +20,23 @@ function Blog() {
                                 {blogposts.data.map((blogpost) => {
                                     return (
                                         <div className="blogpost-listing">
-                                            <div className="blog-image-wrap">
-                                                <Link to={blogpost.attributes.Slug}>
-                                                    <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
-                                                </Link>
-                                            </div>
-                                            <div className="blog-desc">
-                                                <h2>{blogpost.attributes.Title}</h2>
-                                                <p>{blogpost.attributes.Description}</p>
-                                            </div>
-                                            <div className="blog-link">
-                                                <Link to={blogpost.attributes.Slug}>
-                                                    <button>read more.</button>
-                                                </Link>
+                                            <div className="blog-contents">
+                                                <div className="blog-image-wrap">
+                                                    <Link to={blogpost.attributes.Slug}>
+                                                        <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
+                                                    </Link>
+                                                </div>
+                                                <div className="blog-info-wrap">
+                                                    <div className="blog-desc">
+                                                        <h2>{blogpost.attributes.Title}</h2>
+                                                        <p>{blogpost.attributes.Description}</p>
+                                                    </div>
+                                                    <div className="blog-link">
+                                                        <Link to={blogpost.attributes.Slug}>
+                                                            <button>read more.</button>
+                                                        </Link>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <hr className="blog-spacer"></hr>
                                         </div>

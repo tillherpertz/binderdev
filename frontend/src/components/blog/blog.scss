@@ -28,6 +28,7 @@
     }
 
     .blog-link {
+        width: 50%;
         margin-top: 1em;
     }
 
@@ -38,5 +39,30 @@
         opacity: .1;
         height: 1px;
         border: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .blog-contents {
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        margin: 0 auto;
+
+        .blog-image-wrap {
+            max-width: 40%;
+            margin-right: 5%;
+
+            img {
+                margin-bottom: 0;
+            }
+        }
+
+        .blog-info-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 55%;
+        }
     }
 }
