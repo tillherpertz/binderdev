@@ -91,7 +91,8 @@ body.is-dark {
 
     // Blog HR
 
-    hr.blog-spacer {
+    hr.blog-spacer,
+    hr.portfolio-spacer {
         background-color: $binder-light;
     }
 }
@@ -172,7 +173,8 @@ body {
 
     // Blog HR
 
-    hr.blog-spacer {
+    hr.blog-spacer,
+    hr.portfolio-spacer {
         background-color: $binder-dark;
     }
 }

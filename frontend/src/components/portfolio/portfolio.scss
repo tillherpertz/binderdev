@@ -1,0 +1,42 @@
+.portfolio-wrapper {
+    width: 90%;
+    margin: -1.5em auto 0 auto;
+    z-index: 1;
+}
+
+.portfolio-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2em;
+
+    img {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .portfolio-desc {
+        width: 100%;
+
+        * {
+            margin-bottom: .4em;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .portfolio-link {
+        margin-top: 1em;
+    }
+
+    .portfolio-spacer {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2em;
+        opacity: .1;
+        height: 1px;
+        border: none;
+    }
+}

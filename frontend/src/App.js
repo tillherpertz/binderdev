@@ -2,6 +2,7 @@ import Home from "./components/home/home.js"
 import Blog from "./components/blog/blog.js";
 import Post from "./components/bpost/bpost.js"
 import Portfolio from "./components/portfolio/portfolio.js";
+import PortfolioPost from "./components/ppost/ppost.js";
 import About from "./components/about/about.js"
 
 import BLOGPOST_QUERY from "./queries/blog_single_query.js";
@@ -22,7 +23,7 @@ function App() {
                 <Route path='/about' element={<About />}>
                 </Route>
                 <Route path="/blog/:slug" element={<Post />} exact />
-                <Route path="/portfolio/:slug" element={<Post />} exact />
+                <Route path="/portfolio/:slug" element={<PortfolioPost />} exact />
             </Routes>
         </div>
     );

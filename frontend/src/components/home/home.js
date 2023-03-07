@@ -16,8 +16,8 @@ function Home() {
                                 <h1 className="hero-headline">{homepage.data.attributes.Headline}</h1>
                                 <p className="hero-paragraph">{homepage.data.attributes.Paragraph}</p>
                                 <div className="button-wrap">
-                                    <a href=""><button>blog.</button></a>
-                                    <a href=""><button>portfolio.</button></a>
+                                    <a href="/portfolio"><button>portfolio.</button></a>
+                                    <a href="/blog"><button>blog.</button></a>
                                 </div>
                             </div>
                         );

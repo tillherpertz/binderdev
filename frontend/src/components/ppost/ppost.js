@@ -2,10 +2,11 @@ import React from "react";
 import Query from "../Query/query";
 import Header from '../header/header'
 import Footer from '../footer/footer'
-import PORTFOLIO_SINGLE_QUERY from "../../queries/blog_single_query";
+import PORTFOLIO_SINGLE_QUERY from "../../queries/portfolio_single_query";
 import { useParams } from "react-router";
 
-function Post() {
+
+function PortfolioPost() {
     let { slug } = useParams();
 
     return (
@@ -15,15 +16,15 @@ function Post() {
                 <Query query={PORTFOLIO_SINGLE_QUERY} slug={slug}>
                     {({ data: { portfolios } }) => {
                         return (
-                            <div className="portfoliopost-wrapper">
+                            <div className="portfolio-wrapper">
                                 {portfolios.data.map((portfolio) => {
                                     return (
-                                        <div className="portfoliopost-listing">
+                                        <div className="portfolio-listing">
                                             <div className="portfolio-image-wrap">
                                                 <img src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
                                             </div>
                                             <div className="portfolio-desc">
-                                                <h1>{portfolio.attributes.Title}.</h1>
+                                                <h1>{portfolio.attributes.Title}</h1>
                                                 <p>{portfolio.attributes.Description}</p>
                                             </div>
                                         </div>
@@ -35,8 +36,8 @@ function Post() {
                 </Query >
             </div>
             <Footer></Footer>
-        </div>
+        </div >
     );
 }
 
-export default Post
+export default PortfolioPost
