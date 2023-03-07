@@ -129,14 +129,14 @@ header {
                     a {
                         display: block;
                         position: relative;
-                        font-size: 1em;
+                        font-size: .75em;
                         text-decoration: none;
                         cursor: pointer;
 
                         &.active::after {
                             position: absolute;
                             top: 12px;
-                            left: 18%;
+                            left: 0%;
                             margin-left: -3px;
                             content: url(../../../public/images/uline.svg);
                         }
@@ -144,5 +144,9 @@ header {
                 }
             }
         }
+    }
+
+    .theme-toggle {
+        top: 2.75em;
     }
 }
