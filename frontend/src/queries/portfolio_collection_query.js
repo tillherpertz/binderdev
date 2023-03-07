@@ -4,6 +4,7 @@ const PORTFOLIO_COLLECTION_QUERY = gql`
 query Portfolio {
     portfolios {
       data {
+        id
         attributes {
             Image {
                 data {

@@ -4,6 +4,7 @@ const PORTFOLIO_SINGLE_QUERY = gql`
 query Portfolio($slug: String!) {
     portfolios(filters: { Slug: { eq: $slug } }) {
       data {
+        id
         attributes {
             Image {
                 data {

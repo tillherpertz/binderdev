@@ -4,6 +4,7 @@ const BLOG_SINGLE_QUERY = gql`
 query Blogpost($slug: String!) {
     blogposts(filters: { Slug: { eq: $slug } }) {
       data {
+        id
         attributes {
             Image {
                 data {

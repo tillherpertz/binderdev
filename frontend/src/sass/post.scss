@@ -9,6 +9,8 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 2em;
+    opacity: 0;
+    filter: blur(5px);
 
     img {
         max-width: 100%;

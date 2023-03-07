@@ -4,6 +4,7 @@ const BLOG_COLLECTION_QUERY = gql`
 query Blogposts {
     blogposts {
       data {
+        id
         attributes {
             Image {
                 data {
