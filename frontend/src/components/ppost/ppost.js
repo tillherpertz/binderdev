@@ -12,18 +12,18 @@ function PortfolioPost() {
     return (
         <div>
             <Header></Header>
-            <div className="content-wrap is-portfolio-post">
+            <div className="content-wrap is-single-post">
                 <Query query={PORTFOLIO_SINGLE_QUERY} slug={slug}>
                     {({ data: { portfolios } }) => {
                         return (
-                            <div className="portfolio-wrapper">
+                            <div className="post-wrapper">
                                 {portfolios.data.map((portfolio) => {
                                     return (
-                                        <div className="portfolio-listing">
-                                            <div className="portfolio-image-wrap">
-                                                <img src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
+                                        <div className="post-listing">
+                                            <div className="post-image-wrap">
+                                                <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
                                             </div>
-                                            <div className="portfolio-desc">
+                                            <div className="post-desc">
                                                 <h1>{portfolio.attributes.Title}</h1>
                                                 <p>{portfolio.attributes.Description}</p>
                                             </div>

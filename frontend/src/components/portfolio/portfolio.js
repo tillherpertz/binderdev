@@ -15,29 +15,29 @@ function Portfolio() {
                 <Query query={PORTFOLIO_COLLECTION_QUERY} id={null}>
                     {({ data: { portfolios } }) => {
                         return (
-                            <div className="portfolio-wrapper">
+                            <div className="post-wrapper">
                                 {portfolios.data.map((portfolio) => {
                                     return (
-                                        <div className="portfolio-listing">
-                                            <div className="portfolio-contents">
-                                                <div className="portfolio-image-wrap">
+                                        <div className="post-listing">
+                                            <div className="post-contents">
+                                                <div className="post-image-wrap">
                                                     <Link to={portfolio.attributes.Slug}>
                                                         <img src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} alt="" />
                                                     </Link>
                                                 </div>
-                                                <div className="portfolio-info-wrap">
-                                                    <div className="portfolio-desc">
+                                                <div className="post-info-wrap">
+                                                    <div className="post-desc">
                                                         <h2>{portfolio.attributes.Title}</h2>
                                                         <p>{portfolio.attributes.Description}</p>
                                                     </div>
-                                                    <div className="portfolio-link">
+                                                    <div className="post-link">
                                                         <Link to={portfolio.attributes.Slug}>
                                                             <button>read more.</button>
                                                         </Link>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr className="portfolio-spacer"></hr>
+                                            <hr className="post-spacer"></hr>
                                         </div>
                                     );
                                 })}

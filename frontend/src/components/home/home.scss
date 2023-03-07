@@ -35,7 +35,8 @@
         margin: 10% 0;
 
         &.is-blog,
-        &.is-portfolio {
+        &.is-portfolio,
+        &.is-single-post {
             margin: 0;
             padding-bottom: 5em;
         }

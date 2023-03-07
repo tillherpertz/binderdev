@@ -11,18 +11,18 @@ function Post() {
     return (
         <div>
             <Header></Header>
-            <div className="content-wrap is-blog-post">
+            <div className="content-wrap is-single-post">
                 <Query query={BLOG_SINGLE_QUERY} slug={slug}>
                     {({ data: { blogposts } }) => {
                         return (
-                            <div className="blogpost-wrapper">
+                            <div className="post-wrapper">
                                 {blogposts.data.map((blogpost) => {
                                     return (
-                                        <div className="blogpost-listing">
-                                            <div className="blog-image-wrap">
-                                                <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
+                                        <div className="post-listing">
+                                            <div className="post-image-wrap">
+                                                <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
                                             </div>
-                                            <div className="blog-desc">
+                                            <div className="post-desc">
                                                 <h1>{blogpost.attributes.Title}.</h1>
                                                 <p>{blogpost.attributes.Description}</p>
                                                 <p>{blogpost.attributes.Content}</p>
