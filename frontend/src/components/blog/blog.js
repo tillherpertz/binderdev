@@ -23,7 +23,7 @@ function Blog() {
                                             <div className="blog-contents">
                                                 <div className="blog-image-wrap">
                                                     <Link to={blogpost.attributes.Slug}>
-                                                        <img src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
+                                                        <img width="349" height="233" src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
                                                     </Link>
                                                 </div>
                                                 <div className="blog-info-wrap">
