@@ -10,3 +10,34 @@
         font-size: 1.4em;
     }
 }
+
+@media only screen and (min-width: 1024px) {
+    .is-blog-post {
+        h1 {
+            font-size: 5.5em;
+        }
+
+        .blogpost-wrapper {
+
+            .blogpost-listing {
+                .blog-image-wrap {
+                    width: 30%;
+                    float: right;
+                    position: absolute;
+                    top: 3em;
+                    right: 0;
+                    z-index: 0;
+                }
+
+                .blog-desc {
+                    position: relative;
+                    z-index: 1;
+
+                    p {
+                        max-width: 75%;
+                    }
+                }
+            }
+        }
+    }
+}

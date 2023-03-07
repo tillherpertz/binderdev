@@ -34,7 +34,8 @@
         width: 100%;
         margin: 10% 0;
 
-        &.is-blog {
+        &.is-blog,
+        &.is-portfolio {
             margin: 0;
             padding-bottom: 5em;
         }

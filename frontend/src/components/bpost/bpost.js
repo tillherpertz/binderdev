@@ -25,6 +25,7 @@ function Post() {
                                             <div className="blog-desc">
                                                 <h1>{blogpost.attributes.Title}.</h1>
                                                 <p>{blogpost.attributes.Description}</p>
+                                                <p>{blogpost.attributes.Content}</p>
                                             </div>
                                         </div>
                                     );
