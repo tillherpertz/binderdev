@@ -5,8 +5,6 @@ import Footer from '../footer/footer'
 import PortfolioPostCreator from "./portfolioPostCreator";
 import PORTFOLIO_COLLECTION_QUERY from "../../queries/portfolio_collection_query";
 
-import { Link } from "react-router-dom";
-
 function Portfolio() {
     return (
         <div>

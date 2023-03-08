@@ -34,7 +34,7 @@ function PortfolioPost() {
                                     return (
                                         <div ref={ref} className={`post-listing ${inView ? 'animate-show' : ''}`}>
                                             <div className="post-image-wrap">
-                                                <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
+                                                <img alt="" width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
                                             </div>
                                             <div className="post-desc">
                                                 <h1>{portfolio.attributes.Title}</h1>

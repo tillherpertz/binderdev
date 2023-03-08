@@ -6,8 +6,8 @@ function Footer() {
             <hr></hr>
             <div className="links-wrap">
                 <div className="social-wrap">
-                    <a href=""><i className="bi-github"></i></a>
-                    <a href=""><i className="bi-linkedin"></i></a>
+                    <a href="https://github.com/tillherpertz"><i className="bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/till-herpertz-612562232/"><i className="bi-linkedin"></i></a>
                 </div>
                 <div className="madein-wrap">
                     <p>made in germany.</p>

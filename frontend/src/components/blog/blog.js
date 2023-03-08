@@ -5,8 +5,6 @@ import Footer from '../footer/footer';
 import BLOG_COLLECTION_QUERY from "../../queries/blog_collection_query";
 import PostCreator from "./postCreator";
 
-import { Link } from "react-router-dom";
-
 function Blog() {
     return (
         <div>

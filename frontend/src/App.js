@@ -5,9 +5,7 @@ import Portfolio from "./components/portfolio/portfolio.js";
 import PortfolioPost from "./components/ppost/ppost.js";
 import About from "./components/about/about.js"
 
-import BLOGPOST_QUERY from "./queries/blog_single_query.js";
-
-import { Routes, Route, NavLink, Switch } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './all.scss';
 
 function App() {

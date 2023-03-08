@@ -34,7 +34,7 @@ function Post() {
                                     return (
                                         <div ref={ref} className={`post-listing ${inView ? 'animate-show' : ''}`}>
                                             <div className="post-image-wrap">
-                                                <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
+                                                <img alt="" width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
                                             </div>
                                             <div className="post-desc">
                                                 <h1>{blogpost.attributes.Title}.</h1>
