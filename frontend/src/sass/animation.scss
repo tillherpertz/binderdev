@@ -1,13 +1,14 @@
 .post-listing {
+    filter: blur(5px);
+    opacity: 0;
     transition: all 1s;
 
-    &.animate-hidden {
-        filter: blur(5px);
-        opacity: 0;
-
+    &.animate-show {
+        filter: blur(0);
+        opacity: 1;
     }
 
-    &.animate-show {
+    &.visible {
         filter: blur(0);
         opacity: 1;
     }

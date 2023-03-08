@@ -1,11 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useInView } from 'react-intersection-observer';;
 
 
-function PostCreator({ blogpost }) {
+function PortfolioPostCreator({ portfolio }) {
 
     const [hasBeenInView, setHasBeenInView] = useState(false);
 
@@ -20,20 +20,20 @@ function PostCreator({ blogpost }) {
 
     return (
         <>
-            <div ref={ref} key={blogpost.id} className={`post-listing ${inView ? 'animate-show' : ''}`}>
+            <div ref={ref} key={portfolio.id} className={`post-listing ${inView ? 'animate-show' : ''}`}>
                 <div className="post-contents">
                     <div className="post-image-wrap">
-                        <Link to={blogpost.attributes.Slug}>
-                            <img width="349" height="233" src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} alt="" />
+                        <Link to={portfolio.attributes.Slug}>
+                            <img width="349" height="233" src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} alt="" />
                         </Link>
                     </div>
                     <div className="post-info-wrap">
                         <div className="post-desc">
-                            <h2>{blogpost.attributes.Title}</h2>
-                            <p>{blogpost.attributes.Description}</p>
+                            <h2>{portfolio.attributes.Title}</h2>
+                            <p>{portfolio.attributes.Description}</p>
                         </div>
                         <div className="post-link">
-                            <Link to={blogpost.attributes.Slug}>
+                            <Link to={portfolio.attributes.Slug}>
                                 <button>read more.</button>
                             </Link>
                         </div>
@@ -45,4 +45,4 @@ function PostCreator({ blogpost }) {
     )
 }
 
-export default PostCreator
+export default PortfolioPostCreator
