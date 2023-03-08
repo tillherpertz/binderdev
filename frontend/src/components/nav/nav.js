@@ -41,6 +41,7 @@ class Nav extends React.Component {
     render() {
         return (
             <div className="navigation-wrapper">
+
                 <button
                     className="icon--toggle-menu"
                     type="button"

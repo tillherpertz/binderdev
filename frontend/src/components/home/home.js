@@ -7,14 +7,14 @@ import HOME_QUERY from "../../queries/home_query";
 import { useInView } from 'react-intersection-observer';
 
 function Home() {
-    const [hasBeenInView, setHasBeenInView] = useState(false);
+    const [homeHasBeenInView, setHomeHasBeenInView] = useState(false);
     const { ref, inView } = useInView({
-        skip: hasBeenInView,
+        skip: homeHasBeenInView,
     });
 
     // Update hasBeenInView to skip element
-    if (inView && !hasBeenInView) {
-        setHasBeenInView(true);
+    if (inView && !homeHasBeenInView) {
+        setHomeHasBeenInView(true);
     }
     return (
         <div>

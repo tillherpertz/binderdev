@@ -88,3 +88,10 @@
         transition: all 1s 900ms;
     }
 }
+
+// Global Transition for element
+
+button,
+a {
+    transition: all .3s;
+}
