@@ -80,6 +80,10 @@ body.is-dark {
     #navbar.collapsed {
         a {
             color: $binder-dark;
+
+            @media only screen and (min-width: 1024px) {
+                color: $binder-light;
+            }
         }
     }
 
@@ -163,6 +167,13 @@ body {
 
     .icon--toggle-menu span {
         background: $binder-dark;
+    }
+
+    // Navbar Mobile Show Open
+    #navbar.collapsed {
+        a {
+            color: $binder-dark;
+        }
     }
 
     // Footer HR
