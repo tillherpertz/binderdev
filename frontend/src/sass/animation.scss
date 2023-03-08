@@ -1,14 +1,40 @@
+// Home Animations
+
+.home-content>* {
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 6s;
+    transform: translateX(-10%);
+
+    &.animate-show {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &:nth-child(1) {
+        transition: all 1s 100ms;
+    }
+
+    &:nth-child(2) {
+        transition: all 1s 300ms;
+    }
+
+    &:nth-child(3) {
+        transition: all 1s 500ms;
+    }
+}
+
+
+
+
+// Post Animations
 .post-listing {
     filter: blur(5px);
     opacity: 0;
     transition: all 1s;
 
     &.animate-show {
-        filter: blur(0);
-        opacity: 1;
-    }
-
-    &.visible {
         filter: blur(0);
         opacity: 1;
     }
