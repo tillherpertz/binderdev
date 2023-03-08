@@ -1,9 +1,10 @@
-// Home Animations
+// Home & About Animations
 
-.home-content>* {
+.home-content>*,
+.about-content>* {
     filter: blur(5px);
     opacity: 0;
-    transition: all 6s;
+    transition: all;
     transform: translateX(-10%);
 
     &.animate-show {
@@ -25,6 +26,34 @@
     }
 }
 
+// Content Animation
+.content-wrap>.hero-headline {
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-10%);
+
+    &.animate-show {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.post-wrapper>* {
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s 600ms;
+    transform: translateX(-10%);
+
+    &.animate-show {
+        filter: blur(0);
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
 
 
 
@@ -32,10 +61,30 @@
 .post-listing {
     filter: blur(5px);
     opacity: 0;
-    transition: all 1s;
+    transition: all 1s 100ms;
 
     &.animate-show {
         filter: blur(0);
         opacity: 1;
+    }
+
+    &:nth-child(1) {
+        transition: all 1s 100ms;
+    }
+
+    &:nth-child(2) {
+        transition: all 1s 300ms;
+    }
+
+    &:nth-child(3) {
+        transition: all 1s 500ms;
+    }
+
+    &:nth-child(4) {
+        transition: all 1s 700ms;
+    }
+
+    &:nth-child(5) {
+        transition: all 1s 900ms;
     }
 }
