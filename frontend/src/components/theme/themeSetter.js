@@ -9,7 +9,7 @@ class ThemeSetter extends React.Component {
     }
 
     themeGetter() {
-        if (!localStorage.getItem('theme') || localStorage.getItem('theme') == 'light') {
+        if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'light') {
             document.body.classList.add('is-light');
             return 'light';
         } else {
@@ -23,7 +23,7 @@ class ThemeSetter extends React.Component {
     }
 
     setIcon() {
-        if (this.state.theme == 'light') {
+        if (this.state.theme === 'light') {
             return 'bi-moon-fill';
         } else {
             return 'bi-brightness-high';
@@ -31,7 +31,7 @@ class ThemeSetter extends React.Component {
     }
 
     changeTheme() {
-        if (this.state.theme == 'light') {
+        if (this.state.theme === 'light') {
             console.log('theme sets dark');
             this.setState({
                 theme: 'dark'

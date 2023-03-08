@@ -1,10 +1,8 @@
 import React from "react";
 import Query from "../Query/query";
-import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
 import CAT_QUERY from "../../queries/categories_query";
-import { recallCache } from "@apollo/client/cache/inmemory/reactiveVars";
 
 class Nav extends React.Component {
     constructor(props) {

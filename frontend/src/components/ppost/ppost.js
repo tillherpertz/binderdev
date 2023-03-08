@@ -4,10 +4,23 @@ import Header from '../header/header'
 import Footer from '../footer/footer'
 import PORTFOLIO_SINGLE_QUERY from "../../queries/portfolio_single_query";
 import { useParams } from "react-router";
+import { useState } from "react";
+import { useInView } from 'react-intersection-observer';
 
 
 function PortfolioPost() {
     let { slug } = useParams();
+
+    const [hasBeenInView, setHasBeenInView] = useState(false);
+
+    const { ref, inView } = useInView({
+        skip: hasBeenInView,
+    });
+
+    // Update hasBeenInView to skip element
+    if (inView && !hasBeenInView) {
+        setHasBeenInView(true);
+    }
 
     return (
         <div>
@@ -19,7 +32,7 @@ function PortfolioPost() {
                             <div className="post-wrapper">
                                 {portfolios.data.map((portfolio) => {
                                     return (
-                                        <div className="post-listing">
+                                        <div ref={ref} className={`post-listing ${inView ? 'animate-show' : ''}`}>
                                             <div className="post-image-wrap">
                                                 <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + portfolio.attributes.Image.data.attributes.url} />
                                             </div>

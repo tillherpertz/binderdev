@@ -4,9 +4,23 @@ import Header from '../header/header'
 import Footer from '../footer/footer'
 import BLOG_SINGLE_QUERY from "../../queries/blog_single_query";
 import { useParams } from "react-router";
+import { useState } from "react";
+import { useInView } from 'react-intersection-observer';
 
 function Post() {
     let { slug } = useParams();
+
+    const [hasBeenInView, setHasBeenInView] = useState(false);
+
+    const { ref, inView } = useInView({
+        skip: hasBeenInView,
+    });
+
+    // Update hasBeenInView to skip element
+    if (inView && !hasBeenInView) {
+        setHasBeenInView(true);
+    }
+
 
     return (
         <div>
@@ -18,7 +32,7 @@ function Post() {
                             <div className="post-wrapper">
                                 {blogposts.data.map((blogpost) => {
                                     return (
-                                        <div className="post-listing">
+                                        <div ref={ref} className={`post-listing ${inView ? 'animate-show' : ''}`}>
                                             <div className="post-image-wrap">
                                                 <img width={328} height={218} src={process.env.REACT_APP_BACKEND_URL + blogpost.attributes.Image.data.attributes.url} />
                                             </div>
