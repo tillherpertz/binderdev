@@ -81,7 +81,6 @@ class Nav extends React.Component {
                                                         {category.attributes.Name}.
                                                     </NavLink>
                                                 </li>
-
                                             );
                                         })}
                                     </ul>
