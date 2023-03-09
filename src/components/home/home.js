@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Query from "../Query/query";
 import Header from '../header/header'
 import Footer from '../footer/footer'
+import { Link } from "react-router-dom";
 import HOME_QUERY from "../../queries/home_query";
 
 import { useInView } from 'react-intersection-observer';
@@ -27,8 +28,8 @@ function Home() {
                                 <h1 className={`hero-headline ${inView ? 'animate-show' : ''}`}>{homepage.data.attributes.Headline}</h1>
                                 <p className={`hero-paragraph ${inView ? 'animate-show' : ''}`}>{homepage.data.attributes.Paragraph}</p>
                                 <div className={`button-wrap ${inView ? 'animate-show' : ''}`}>
-                                    <a href="/portfolio"><button>portfolio.</button></a>
-                                    <a href="/blog"><button>blog.</button></a>
+                                    <Link to="/portfolio"><button>portfolio.</button></Link>
+                                    <Link to="/blog"><button>blog.</button></Link>
                                 </div>
                             </div>
                         );
